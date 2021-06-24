@@ -12,13 +12,13 @@ type AuthContextType = {
     singInWithGoogle: () => Promise<void>;
 }
 
-type AuthContextProvider = {
+type AuthContextProviderType = {
     children: ReactNode,
 }
 
 export const AuthContext = createContext({} as AuthContextType );
 
-export function AuthContextProvider(props: AuthContextProvider) {
+export function AuthContextProvider(props: AuthContextProviderType) {
     const [user, setUser] = useState<User>();
 
     useEffect(() => {
